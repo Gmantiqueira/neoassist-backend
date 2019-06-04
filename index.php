@@ -93,9 +93,7 @@
                 };
             };
         } else{
-            foreach($json as $ticket){
-                returnJson($ticket);
-            }
+            returnJson($json);
         };
     }
 
