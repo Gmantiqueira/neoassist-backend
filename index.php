@@ -10,7 +10,7 @@
 
     $method = $_SERVER['REQUEST_METHOD'];
 
-    header('Content-type: application/json; charset=UTF-8');
+    header('Content-type: application/json; charset=UTF-8; Access-Control-Allow-Origin: *');
 
     $query = array();
     parse_str($_SERVER['QUERY_STRING'], $query);
