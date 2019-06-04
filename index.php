@@ -10,7 +10,10 @@
 
     $method = $_SERVER['REQUEST_METHOD'];
 
-    header('Content-type: application/json; charset=UTF-8; Access-Control-Allow-Origin: *');
+    header('Content-type: application/json; charset=UTF-8;');
+    header('Access-Control-Allow-Origin: *');
+    header('Access-Control-Allow-Methods: GET, POST');
+    header("Access-Control-Allow-Headers: X-Requested-With");
 
     $query = array();
     parse_str($_SERVER['QUERY_STRING'], $query);
@@ -90,7 +93,9 @@
                 };
             };
         } else{
-            returnJson($json);
+            foreach($json as $ticket){
+                returnJson($ticket);
+            }
         };
     }
 
