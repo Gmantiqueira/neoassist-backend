@@ -87,11 +87,14 @@
         if(isset($query['page'])){
             $pageNumber = round(sizeof($json) / $ticketsByPage);
             $lastPage = $query['page'] * $ticketsByPage;
+            $newJson = [];
             for($c = 1; $c <= sizeof($json); $c++){
                 if($c <= $lastPage && $c > $lastPage - 5){
-                    returnJson($json[$c - 1]);
+                    array_push($newJson, $json[$c - 1]);
                 };
             };
+            $json = $newJson;
+            returnJson($json);
         } else{
             returnJson($json);
         };
