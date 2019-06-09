@@ -62,7 +62,9 @@ E o valor 1.5 é apenas um agravante.
 
 No arquivo config.php, podem ser alteradas as palavras-chave e a quantidade de tickets por página.
 
----
+## Observações
+
+Pensei em utilizar a Cloud Natural Language API da Google Cloud, porém possuía somente o Free Trial disponibilizado. Essa API funcionaria perfeitamente, pois realizei os testes na demonstração dela, inserindo cada mensagem dos tickets e avaliou com precisão.
 
 # Desafio desenvolvedor backend
 
