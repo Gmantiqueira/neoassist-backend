@@ -54,9 +54,9 @@ Depois, utilizei a seguinte fórmula:
 
 W x (1.5 x A) , onde:
 
-W = Pontuação de palavras,
-A = Atraso da primeira resposta do Expert,
-E o valor 1.5 é apenas um agravante.
+- W = Pontuação de palavras,
+- A = Atraso da primeira resposta do Expert,
+- Valor 1.5 é apenas um agravante.
 
 ## Sobre manutenção de código
 
