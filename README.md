@@ -9,7 +9,7 @@ Pensando nisso, queremos classificar nossos tickets com as seguintes prioridade:
 ### Prioridade Alta:
 
 - Consumidor insatisfeito com produto ou serviço
-  - Prazo de resolução do ticket alta
+- Prazo de resolução do ticket alta
 - Consumidor sugere abrir reclamação como exemplo Procon ou ReclameAqui
 
 ### Prioridade Normal

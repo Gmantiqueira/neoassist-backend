@@ -19,15 +19,12 @@
     parse_str($_SERVER['QUERY_STRING'], $query);
     
     if($method === 'GET'){
-
         /* Ordenação */
         if(isset($_GET['orderby'])){
             if(function_exists("sortBy".$query['orderby'])){
                 usort($newJson, 'sortBy'.$query['orderby']);
             }
         }
-
-        /* Filtro */
 
         /* Desde XX-XX-XXXX */
         if(isset($_GET['since']) && !isset($_GET['until'])){
@@ -80,7 +77,6 @@
                 };
             };
         };
-
         $json = $newJson;
 
         /* Paginação */
@@ -99,5 +95,4 @@
             returnJson($json);
         };
     }
-
 ?>
