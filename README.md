@@ -66,6 +66,8 @@ No arquivo config.php, podem ser alteradas as palavras-chave e a quantidade de t
 
 Pensei em utilizar a Cloud Natural Language API da Google Cloud, porém possuía somente o Free Trial disponibilizado. Essa API funcionaria perfeitamente, pois realizei os testes na demonstração dela, inserindo cada mensagem dos tickets e avaliou com precisão.
 
+---
+
 # Desafio desenvolvedor backend
 
 Precisamos melhorar o atendimento no Brasil, para alcançar esse resultado, precisamos de um algoritmo que classifique
