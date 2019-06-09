@@ -55,7 +55,7 @@
         if($wordScore != 0){
             $score = $wordScore * (2 * floatval($ticket["DaysDelay"]));
         } else {
-            $score = (2 * floatval($ticket["DaysDelay"]));
+            $score = (1.5 * floatval($ticket["DaysDelay"]));
         }
         $score = number_format($score, 2);
         $ticket["Score"] = floatval($score);

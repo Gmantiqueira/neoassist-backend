@@ -1,3 +1,69 @@
+# Considerações Finais:
+
+## Sobre hospedagem
+
+A API está hospedada no seguinte link: https://neoassist-backend.herokuapp.com/
+
+E seus dados podem ser visualizados no layout em React: https://neoassist-frontend.herokuapp.com/
+
+A API foi construída em PHP sem frameworks. Ela possui as seguintes funcionalidades:
+
+Paginação - "/?page=1", no momento está mostrando 4 tickets por página (esse número pode ser alterado através do config.php)
+
+Ordenar por:
+
+- Data de Criação (Crescente ou decrescente) - "/?orderby=datecreate" ou "?orderby=datecreate_reverse".
+
+- Data de Atualização (Crescente ou decrescente) - "/?orderby=dateupdate" ou "?orderby=dateupdate_reverse".
+
+- Data de Prioridade (Crescente ou decrescente) - "/?orderby=score" ou "?orderby=score_reverse".
+
+Filtrar por data:
+
+- Desde determinado dia - "/?since=24-12-2017"
+
+- Até determinado dia - "/?until=31-12-2017".
+
+- Deste determinado dia até determinado dia - "/?since=24-12-2017&until=31-12-2017".
+
+E existe a opção de mostrar somente quem possui prioridade alta ou quem possui prioridade normal - "/?highpriority=true" ou "/?highpriority=false"
+
+Esse filtros são cumulativos, ou seja, podem ser utilizados simultaneamente.
+
+Exemplo: "/?orderby=datecreate&since=07-12-2017&until=13-12-2017&page=1&highpriority=true":
+
+- Será ordenado por data de criação, mostrando os tickets desde o dia 07/12/2017 até o dia 13/12/2017, mostrará somente aqueles com prioridade alta e da página 1.
+
+## Sobre a pontuação de prioridade
+
+Para gerar a pontuação de prioridade, utilizei uma relação de Palavras-Chave X Atraso da resposta do funcionário.
+
+Para decidir o humor do consumidor, busquei 4 tipos de palavras-chave e seus determinados valores nas mensagens dos e-mails dos consumidores:
+
+- Palavras "ótimas", que com certeza significam positividade. (valor: 2)
+- Palavras "boas", que talvez significam positividade. (valor: 1)
+- Palavras "ruins", que talvez significam negatividade. (valor: -1)
+- Palavras "críticas", que com certeza significam negatividade. (valor: -2)
+
+Pra cada palavra encontrada, o valor da mesma é adicionada na soma.
+A soma de todas as pontuações obtidas gera a "Pontuação de palavras" de determinado ticket.
+
+Depois, utilizei a seguinte fórmula:
+
+W x (1.5 x A) , onde:
+
+W = Pontuação de palavras,
+A = Atraso da primeira resposta do Expert,
+E o valor 1.5 é apenas um agravante.
+
+## Sobre manutenção de código
+
+No arquivo config.php, podem ser alteradas as palavras-chave e a quantidade de tickets por página.
+
+---
+
+---
+
 # Desafio desenvolvedor backend
 
 Precisamos melhorar o atendimento no Brasil, para alcançar esse resultado, precisamos de um algoritmo que classifique
