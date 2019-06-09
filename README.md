@@ -4,7 +4,9 @@
 
 A API está hospedada no seguinte link: https://neoassist-backend.herokuapp.com/
 
-E seus dados podem ser visualizados no layout em React: https://neoassist-frontend.herokuapp.com/
+E seus dados podem ser visualizados no layout em React: https://neoassist-frontend.herokuapp.com/ (https://github.com/Gmantiqueira/neoassist-api-filter/)
+
+## Sobre a API
 
 A API foi construída em PHP sem frameworks. Ela possui as seguintes funcionalidades:
 
@@ -59,8 +61,6 @@ E o valor 1.5 é apenas um agravante.
 ## Sobre manutenção de código
 
 No arquivo config.php, podem ser alteradas as palavras-chave e a quantidade de tickets por página.
-
----
 
 ---
 
